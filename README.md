@@ -18,15 +18,15 @@ Users can either:
 ## 📁 Directory Structure
 
 Danzle-assets/
-├── SAM2/                         # Silhouette video generation tool
-│   ├── sam2_generate.py          # PyTorch-based script (requires GPU)
-│   ├── requirements.txt
-│   └── sample_input/             # Sample dance images or video frames
+├── SAM2/ # Silhouette video generation tool
+│ ├── sam2_generate.py # PyTorch-based script (requires GPU)
+│ ├── requirements.txt
+│ └── sample_input/ # Sample dance images or video frames
 │
-└── UNITY/                        # Unity assets for avatar choreography rendering
-    ├── processed_videos/         # Pre-rendered silhouette videos (.mp4)
-    └── suisei_vivideba_motion_.fbx  # Dance motion animation (FBX format)
- 
+└── UNITY/ # Unity assets for avatar choreography rendering
+├── processed_videos/ # Pre-rendered silhouette videos (.mp4)
+└── suisei_vivideba_motion_.fbx # Dance motion animation (FBX format)
+
 
 ## ⚙️SAM2 Tech Stacks
 
@@ -89,6 +89,7 @@ pip install -r requirements.txt
 # 4. Run silhouette generation
 python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
 
+---
 
 ## 🔐 Environment Variables
 

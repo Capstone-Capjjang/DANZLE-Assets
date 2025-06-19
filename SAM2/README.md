@@ -10,7 +10,7 @@ This project demonstrates how to use [Meta AI’s SAM2 (Segment Anything Model 2
 Download the following three items in advance:
 
 - `SuperShy.mp4`
-- `SuperShy_frames/` (folder of extracted JPEG frames)
+- `SuperShy_frames/` (folder of extracted JPEG frames) -> [Download Dataset (Google Drive)](https://drive.google.com/file/d/1ALwWEgiPRNNtJQ-_ALMRXXY0RtmFZNyR/view?usp=drive_link)
 - `extractSillouet.ipynb` (Colab notebook)
 
 ### 2. Set up Google Drive

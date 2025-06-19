@@ -25,6 +25,7 @@ Danzle-assets/<br>
 │<br>
 └── UNITY/                        # Unity assets for avatar choreography rendering<br>
     ├── processed_videos/         # Pre-rendered silhouette videos (.mp4)<br>
+    │   └── avatar_choreo_demo.mp4  # Sample Unity output video (optional)<br>
     └── suisei_vivideba_motion_.fbx  # Dance motion animation (FBX format)<br>
 </pre>
 
@@ -49,19 +50,19 @@ It uses a Google Colab-based notebook to generate **silhouette masks** and apply
 
 ## ⚙️ Unity Tech Stacks
 
-The `UNITY/` directory includes Unity project files, silhouette references, and motion assets used to render a **3D avatar** performing expert choreography.  
-This module enables the **"dance-with-avatar" mode** by generating pre-rendered avatar videos that are later displayed on the user's camera view during practice.  
-It may also include `.fbx` motion files that define expert choreography, which can be applied to humanoid avatars in Unity.
+The `UNITY/` directory includes motion data and pre-rendered output for visualizing a **3D avatar** that performs expert choreography in Unity.  
+This module powers the **"dance-with-avatar" mode**, where an animated avatar is shown alongside the user’s camera feed during dance practice.  
+The `.fbx` motion file defines choreography, while the `.mp4` sample video demonstrates the intended visual result in Unity.
 
 | Component | Description                                                             |
 |-----------|-------------------------------------------------------------------------|
 | Engine    | Unity 2022.3 LTS                                                        |
-| Input     | Silhouette videos or motion data (.fbx)                                 |
+| Input     | Motion data (.fbx), sample output videos (.mp4)                         |
 | Output    | Avatar character performing choreography in 3D                          |
 | Purpose   | Creates an immersive experience by letting users dance with a 3D avatar |
 | Platform  | Output is integrated into user-facing camera UI in the app              |
 
-📝 *Used to generate interactive content for “challenge” mode.*
+📝 *Used to generate interactive content for “challenge” mode using motion and timeline assets.*
 
 
 ## 📍Features
@@ -111,6 +112,6 @@ To generate silhouette guide videos with SAM2:
 | Type           | Location                            |
 |----------------|-------------------------------------|
 | Sample Video   | `SAM2/SuperShy.mp4`                 |
-| Output Video   | `UNITY/processed_videos/`           |
+| Output Video   | `UNITY/processed_videos/avatar_choreo_demo.mp4` |
 | Avatar Motion  | `UNITY/suisei_vivideba_motion_.fbx` |
 | Colab Notebook | `SAM2/extractSillouet.ipynb`        |

@@ -15,17 +15,7 @@ Users can either:
 - **Dance alongside a 3D avatar** rendered in real-time via Unity integration.
 
 
-## 📁 Directory Structure
-
-Danzle-assets/
-├── SAM2/ # Silhouette video generation tool
-│ ├── sam2_generate.py # PyTorch-based script (requires GPU)
-│ ├── requirements.txt
-│ └── sample_input/ # Sample dance images or video frames
-│
-└── UNITY/ # Unity assets for avatar choreography rendering
-├── processed_videos/ # Pre-rendered silhouette videos (.mp4)
-└── suisei_vivideba_motion_.fbx # Dance motion animation (FBX format)
+<pre><code>## 📁 Directory Structure ``` Danzle-assets/ ├── SAM2/ # Silhouette video generation tool │ ├── sam2_generate.py # PyTorch-based script (requires GPU) │ ├── requirements.txt │ └── sample_input/ # Sample dance images or video frames │ └── UNITY/ # Unity assets for avatar choreography rendering ├── processed_videos/ # Pre-rendered silhouette videos (.mp4) └── suisei_vivideba_motion_.fbx # Dance motion animation (FBX format) ``` </code></pre>
 
 
 ## ⚙️SAM2 Tech Stacks

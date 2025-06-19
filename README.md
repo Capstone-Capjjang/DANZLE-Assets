@@ -76,7 +76,6 @@ It may also include `.fbx` motion files that define expert choreography, which c
 
 ## 🚀 How to Run (SAM2 Module)
 
-```bash
 # 1. Clone and navigate
 git clone https://github.com/Capstone-Capjjang/DANZLE-Assets.git
 cd DANZLE-Assets/SAM2
@@ -90,7 +89,6 @@ pip install -r requirements.txt
 
 # 4. Run silhouette generation
 python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
-```
 
 
 ## 🔐 Environment Variables

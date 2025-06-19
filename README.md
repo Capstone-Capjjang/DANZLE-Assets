@@ -19,10 +19,9 @@ Users can either:
 
 <pre>
 Danzle-assets/<br>
-├── SAM2/                         # Silhouette video generation tool<br>
-│   ├── sam2_generate.py          # PyTorch-based script (requires GPU)<br>
-│   ├── requirements.txt<br>
-│   └── sample_input/             # Sample dance images or video frames<br>
+├── SAM2/                         # Silhouette generation tool (Colab-based)<br>
+│   ├── extractSillouet.ipynb     # Main Colab notebook for SAM2 processing<br>
+│   └── SuperShy.mp4              # Sample expert choreography video<br>
 │<br>
 └── UNITY/                        # Unity assets for avatar choreography rendering<br>
     ├── processed_videos/         # Pre-rendered silhouette videos (.mp4)<br>
@@ -30,25 +29,25 @@ Danzle-assets/<br>
 </pre>
 
 
-## ⚙️SAM2 Tech Stacks
+## ⚙️ SAM2 Tech Stacks
 
 The `SAM2/` directory contains a preprocessing pipeline built on Meta AI’s [Segment Anything Model 2 (SAM2)](https://github.com/facebookresearch/sam2).  
-It extracts **binary masks** from each frame of a dance video and produces a transparent `.mp4` or `.webm` silhouette video for user guidance.
+It uses a Google Colab-based notebook to generate **silhouette masks** and apply **neon visual effects**, exporting transparent videos for user guidance.
 
 | Component          | Description                                          |
 |--------------------|------------------------------------------------------|
 | Model              | SAM2 (Segment Anything Model 2 by Meta AI)           |
-| Framework          | PyTorch                                              |
-| Input              | Individual dance frames from expert videos           |
-| Output             | Binary masks and transparent silhouette `.mp4` video |
-| Purpose            | Provides clean silhouette overlay for user guidance  |
-| Environment        | CUDA-enabled GPU recommended                         |
+| Framework          | PyTorch (via Colab)                                  |
+| Input              | Expert choreography video frames or video            |
+| Output             | Silhouette masks and transparent `.webm` video       |
+| Purpose            | Provides visual guidance through minimal silhouettes |
+| Platform           | Google Colab + Drive                                 |
 
-📝 *For advanced use (e.g., Colab, neon visualization), refer to [`SAM2/README.md`](./SAM2/README.md).*
+📝 *See [`SAM2/README.md`](./SAM2/README.md) for step-by-step Colab instructions.*
 
 ---
 
-## ⚙️Unity Tech Stacks
+## ⚙️ Unity Tech Stacks
 
 The `UNITY/` directory includes Unity project files, silhouette references, and motion assets used to render a **3D avatar** performing expert choreography.  
 This module enables the **"dance-with-avatar" mode** by generating pre-rendered avatar videos that are later displayed on the user's camera view during practice.  
@@ -67,64 +66,51 @@ It may also include `.fbx` motion files that define expert choreography, which c
 
 ## 📍Features
 
-- Converts expert choreography videos into **transparent silhouette guides** using SAM2
-- Renders **3D avatar-based dance guidance** using Unity
-- Output visuals are optimized for overlay in mobile camera view
-- Includes FFmpeg-based tools to convert videos into `.mp4` or `.webm` with alpha transparency
-- Sample input frames and output videos are included for testing and prototyping
+- Generates **transparent silhouette guide videos** using SAM2 in Google Colab
+- Renders **3D avatar choreography** in Unity for immersive dance practice
+- Output videos are optimized for overlay in mobile camera view
+- Includes `.fbx` and `.mp4` assets for Unity timeline animation
+- Sample assets included for testing and prototyping
 
 
-## 🚀 How to Run (for developers)
+## 🚀 How to Run (SAM2 module)
 
-### Requirements
+This module is designed to run primarily in **Google Colab** using an interactive notebook.  
+To generate silhouette guide videos with SAM2:
 
-- Python 3.8 or higher  
-- PyTorch with CUDA (recommended)  
-- ffmpeg installed (for video generation)
-
-### Steps to Run
-
-1. Clone the repository:
+1. Open the Colab notebook:
     ```bash
-    git clone https://github.com/Capstone-Capjjang/DANZLE-Assets.git
-    cd DANZLE-Assets/SAM2
+    SAM2/extractSillouet.ipynb
     ```
 
-2. (Optional) Set up a virtual environment:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # or venv\Scripts\activate on Windows
-    ```
+2. Follow the in-notebook steps to:
+   - Mount Google Drive  
+   - Install dependencies (PyTorch, SAM2)  
+   - Download SAM2 checkpoints  
+   - Run segmentation and export `.webm` video
 
-3. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Run silhouette generation:
-    ```bash
-    python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
-    ```
+📌 For full details, see [`SAM2/README.md`](./SAM2/README.md).
 
 
 ## 🔐 Environment Variables
 
-- No `.env` file is required.
-- Input/output file paths are passed via CLI or hardcoded in `sam2_generate.py`.
-- For best performance, install **PyTorch with CUDA** support.
+- No `.env` files are required.
+- All configurations are handled directly inside the Colab notebook.
+- Video input/output paths are expected to be located in Google Drive.
 
 
 ## 📝 Additional Notes
 
-- `conversion_tool/` includes FFmpeg scripts for `.webm` alpha encoding if needed.
-- Colab-based interactive pipeline (with point-click masking and neon effects) is available in `SAM2/README.md`.
-- Ensure silhouette and avatar videos are rendered at **consistent resolution and framerate**.
+- The Unity project assumes silhouette and avatar videos share a consistent **resolution and frame rate**.
+- Colab-based SAM2 workflow supports both mask propagation and neon visualization.
+- `.fbx` files can be added to Unity Timeline for synchronized animation.
 
 
 ## 📦 Sample Assets
 
-| Type           | Location                    |
-|----------------|-----------------------------|
-| Input Frames   | `SAM2/sample_input/`        |
-| Output Video   | `UNITY/processed_videos/`   |
-| Scripts        | `SAM2/sam2_generate.py`     |
+| Type           | Location                            |
+|----------------|-------------------------------------|
+| Sample Video   | `SAM2/SuperShy.mp4`                 |
+| Output Video   | `UNITY/processed_videos/`           |
+| Avatar Motion  | `UNITY/suisei_vivideba_motion_.fbx` |
+| Colab Notebook | `SAM2/extractSillouet.ipynb`        |

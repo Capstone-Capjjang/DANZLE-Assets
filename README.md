@@ -15,7 +15,19 @@ Users can either:
 - **Dance alongside a 3D avatar** rendered in real-time via Unity integration.
 
 
-<pre><code>## 📁 Directory Structure ``` Danzle-assets/ ├── SAM2/ # Silhouette video generation tool │ ├── sam2_generate.py # PyTorch-based script (requires GPU) │ ├── requirements.txt │ └── sample_input/ # Sample dance images or video frames │ └── UNITY/ # Unity assets for avatar choreography rendering ├── processed_videos/ # Pre-rendered silhouette videos (.mp4) └── suisei_vivideba_motion_.fbx # Dance motion animation (FBX format) ``` </code></pre>
+## 📁 Directory Structure
+
+<pre>
+Danzle-assets/<br>
+├── SAM2/                         # Silhouette video generation tool<br>
+│   ├── sam2_generate.py          # PyTorch-based script (requires GPU)<br>
+│   ├── requirements.txt<br>
+│   └── sample_input/             # Sample dance images or video frames<br>
+│<br>
+└── UNITY/                        # Unity assets for avatar choreography rendering<br>
+    ├── processed_videos/         # Pre-rendered silhouette videos (.mp4)<br>
+    └── suisei_vivideba_motion_.fbx  # Dance motion animation (FBX format)<br>
+</pre>
 
 
 ## ⚙️SAM2 Tech Stacks
@@ -78,8 +90,8 @@ pip install -r requirements.txt
 
 # 4. Run silhouette generation
 python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
+```
 
----
 
 ## 🔐 Environment Variables
 
@@ -87,7 +99,6 @@ python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
 - Input/output file paths are passed via CLI or hardcoded in `sam2_generate.py`.
 - For best performance, install **PyTorch with CUDA** support.
 
----
 
 ## 📝 Additional Notes
 
@@ -95,7 +106,6 @@ python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
 - Colab-based interactive pipeline (with point-click masking and neon effects) is available in `SAM2/README.md`.
 - Ensure silhouette and avatar videos are rendered at **consistent resolution and framerate**.
 
----
 
 ## 📦 Sample Assets
 
@@ -104,14 +114,3 @@ python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
 | Input Frames   | `SAM2/sample_input/`        |
 | Output Video   | `UNITY/processed_videos/`   |
 | Scripts        | `SAM2/sam2_generate.py`     |
-
-
-
-
-
-
-
-
-
-
-

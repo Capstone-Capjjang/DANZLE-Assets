@@ -74,21 +74,37 @@ It may also include `.fbx` motion files that define expert choreography, which c
 - Sample input frames and output videos are included for testing and prototyping
 
 
-## 🚀 How to Run (SAM2 Module)
+## 🚀 How to Run (for developers)
 
-# 1. Clone and navigate
-git clone https://github.com/Capstone-Capjjang/DANZLE-Assets.git
-cd DANZLE-Assets/SAM2
+### Requirements
 
-# 2. (Optional) Set up virtual environment
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+- Python 3.8 or higher  
+- PyTorch with CUDA (recommended)  
+- ffmpeg installed (for video generation)
 
-# 3. Install dependencies
-pip install -r requirements.txt
+### Steps to Run
 
-# 4. Run silhouette generation
-python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Capstone-Capjjang/DANZLE-Assets.git
+    cd DANZLE-Assets/SAM2
+    ```
+
+2. (Optional) Set up a virtual environment:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # or venv\Scripts\activate on Windows
+    ```
+
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run silhouette generation:
+    ```bash
+    python sam2_generate.py --input sample_input/frame_*.png --output out.mp4
+    ```
 
 
 ## 🔐 Environment Variables

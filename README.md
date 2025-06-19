@@ -1,5 +1,5 @@
 # DANZLE-Assets
-
+<br><br>
 ## 💡 Project Overview
 
 This repository provides **media preprocessing tools and sample assets** for the DANZLE dance training system.  
@@ -14,7 +14,7 @@ Users can either:
 - Follow a **transparent silhouette video** of expert dance overlaid on their camera feed, or  
 - **Dance alongside a 3D avatar** rendered in real-time via Unity integration.
 
-
+<br><br>
 ## 📁 Directory Structure
 
 <pre>
@@ -28,7 +28,7 @@ Danzle-assets/<br>
     └── suisei_vivideba_motion_.fbx  # Dance motion animation (FBX format)<br>
 </pre>
 
-
+<br><br>
 ## ⚙️ SAM2 Tech Stacks
 
 The `SAM2/` directory contains a preprocessing pipeline built on Meta AI’s [Segment Anything Model 2 (SAM2)](https://github.com/facebookresearch/sam2).  
@@ -45,8 +45,8 @@ It uses a Google Colab-based notebook to generate **silhouette masks** and apply
 
 📝 *See [`SAM2/README.md`](./SAM2/README.md) for step-by-step Colab instructions.*
 
----
 
+<br><br>
 ## ⚙️ Unity Tech Stacks
 
 The `UNITY/` directory includes motion data and pre-rendered output for visualizing a **3D avatar** that performs expert choreography in Unity.  
@@ -63,7 +63,7 @@ The `.fbx` motion file defines choreography, while the `.mp4` sample video demon
 
 📝 *Used to generate interactive content for “challenge” mode using motion and timeline assets.*
 
-
+<br><br>
 ## 📍Features
 
 - Generates **transparent silhouette guide videos** using SAM2 in Google Colab
@@ -72,7 +72,7 @@ The `.fbx` motion file defines choreography, while the `.mp4` sample video demon
 - Includes `.fbx` and `.mp4` assets for Unity timeline animation
 - Sample assets included for testing and prototyping
 
-
+<br><br>
 ## 🚀 How to Run (SAM2 module)
 
 This module is designed to run primarily in **Google Colab** using an interactive notebook.  
@@ -91,21 +91,21 @@ To generate silhouette guide videos with SAM2:
 
 📌 For full details, see [`SAM2/README.md`](./SAM2/README.md).
 
-
+<br><br>
 ## 🔐 Environment Variables
 
 - No `.env` files are required.
 - All configurations are handled directly inside the Colab notebook.
 - Video input/output paths are expected to be located in Google Drive.
 
-
+<br><br>
 ## 📝 Additional Notes
 
 - The Unity project assumes silhouette and avatar videos share a consistent **resolution and frame rate**.
 - Colab-based SAM2 workflow supports both mask propagation and neon visualization.
 - `.fbx` files can be added to Unity Timeline for synchronized animation.
 
-
+<br><br>
 ## 📦 Sample Assets
 
 | Type           | Location                            |

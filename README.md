@@ -1,6 +1,6 @@
 # DANZLE-Assets
 
-## 💡 Project Purpose
+## 💡 Project Overview
 
 This repository contains **preprocessing assets** and **helper scripts** used in the Danzle project. It includes two major components:
 

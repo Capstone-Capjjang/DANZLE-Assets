@@ -76,18 +76,26 @@ The `.fbx` motion file defines choreography, while the `.mp4` sample video demon
 ## 🚀 How to Run (SAM2 module)
 
 This module is designed to run primarily in **Google Colab** using an interactive notebook.  
-To generate silhouette guide videos with SAM2:
+To generate silhouette guide videos with SAM2, follow the steps below:
 
-1. Open the Colab notebook:
+1. Clone this repository to your local machine or Google Drive:
+
     ```bash
-    SAM2/extractSillouet.ipynb
+    git clone https://github.com/Capstone-Capjjang/DANZLE-Assets.git
     ```
 
-2. Follow the in-notebook steps to:
-   - Mount Google Drive  
-   - Install dependencies (PyTorch, SAM2)  
-   - Download SAM2 checkpoints  
-   - Run segmentation and export `.webm` video
+2. Open the following notebook in **Google Colab**:
+
+    ```
+    DANZLE-Assets/SAM2/extractSillouet.ipynb
+    ```
+
+3. In the notebook, follow the steps to:
+
+    - Mount Google Drive  
+    - Install dependencies (PyTorch, SAM2, OpenCV)  
+    - Download SAM2 checkpoints  
+    - Run segmentation and export `.webm` silhouette video
 
 📌 For full details, see [`SAM2/README.md`](./SAM2/README.md).
 

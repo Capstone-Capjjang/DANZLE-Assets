@@ -24,8 +24,7 @@ Danzle-assets/<br>
 │   └── SuperShy.mp4              # Sample expert choreography video<br>
 │<br>
 └── UNITY/                        # Unity assets for avatar choreography rendering<br>
-    ├── processed_videos/         # Pre-rendered silhouette videos (.mp4)<br>
-    │   └── challenge_avatar.mp4  # Sample Unity output video (optional)<br>
+    ├── challenge_avatar.mp4  # Sample Unity output video (optional)<br>
     └── suisei_vivideba_motion_.fbx  # Dance motion animation (FBX format)<br>
 </pre>
 
@@ -112,6 +111,6 @@ To generate silhouette guide videos with SAM2:
 | Type           | Location                            |
 |----------------|-------------------------------------|
 | Sample Video   | `SAM2/SuperShy.mp4`                 |
-| Output Video   | `UNITY/processed_videos/challenge_avatar.mp4` |
+| Output Video   | `UNITY/challenge_avatar.mp4` |
 | Avatar Motion  | `UNITY/suisei_vivideba_motion_.fbx` |
 | Colab Notebook | `SAM2/extractSillouet.ipynb`        |
